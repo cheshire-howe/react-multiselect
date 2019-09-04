@@ -16,7 +16,7 @@ const Option = props => {
     disabled,
   } = props;
   const cssOverride = item.cssOverride;
-  const cssClass = isSelected ? 'option selected ' + cssOverride : 'option';
+  const cssClass = isSelected ? 'option selected ' + cssOverride : 'option ' + cssOverride;
   const body = isDataObject(item, labelKey, valueKey) ? item[labelKey] : item;
   const inputType = multiple ? 'checkbox' : 'radio';
   const select = () => !disabled && selectValue(item);
