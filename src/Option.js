@@ -15,7 +15,8 @@ const Option = props => {
     tabIndex,
     disabled,
   } = props;
-  const cssClass = isSelected ? 'option selected' : 'option';
+  const cssOverride = item.cssOverride;
+  const cssClass = isSelected ? 'option selected ' + cssOverride : 'option';
   const body = isDataObject(item, labelKey, valueKey) ? item[labelKey] : item;
   const inputType = multiple ? 'checkbox' : 'radio';
   const select = () => !disabled && selectValue(item);
